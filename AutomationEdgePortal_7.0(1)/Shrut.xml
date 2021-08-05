@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestSuite" thread-count="1" parallel="methods" >
+<test name="AESanity">
+
+
+		<classes>
+	 	<!--  <class name="com.ae.qa.testcases.LoginPageTest"> 
+ 				<methods> 
+ 					<include name="ValidateFirstTimeLoginTest" />  
+				</methods> 
+			</class>   -->
+			 <class name="com.ae.qa.testcases.TenantsPageTest"> 
+ 				<methods> 
+ 					<include name="validateAddNewTenant" /> 
+ 					<include name="validateaddNewTenantsWithDuplicateOrgCode" /> 
+					<include name="verifyLicenseInfoTest" /> 
+				</methods> 
+			</class> 
+			<class name="com.ae.qa.testcases.SystemUsersPageTest"> 
+				<methods>
+					<include name="creatingSystemAdminTest" />
+					<include name="validateEditSystemUsers" /> 
+ 					<include name="validatePasswordMismatch" /> 	
+				</methods>
+			</class>
+		 	<class name="com.ae.qa.testcases.TenantUsersPageTest">
+				<methods>
+					<include name="ValidateCreatingTenantAdminTest" />
+					<include name="ValidateEditTenantUserTest" />
+				</methods>
+			</class> 		
+	 		<class name="com.ae.qa.testcases.AuditLogsPageTest">
+				<methods>
+					<include name="validatedownloadingAuditLogs" /> 
+					<include name="validatecheckColumnsInAuditLogs" />
+					<include name="validatedeselectAllInAuditLogs" />
+					<include name="verifySpecificColumnTest" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcases.ArtifactsPageTest">
+				<methods>
+					<include name="validateUploadPSTest" />
+				</methods>
+			</class> 
+			<class name="com.ae.qa.testcases.PluginsPageTest">
+				<methods>
+					<include name="validateUploadPluginsTest" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcases.SystemSettingsPageTest">
+				<methods>
+					<include name="validateAgentServerNotSetTest" />
+					<include name="validateInvalidURLTest" />
+					<include name="validateServerUrlTest" />
+					<include name="validateEditCleanUpRequest" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcases.SmtpPageTest">
+				<methods>
+					<include name="validateAddSmtpServerTest" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcases.SecurityQuestionsPageTest">
+				<methods>
+					<include name="validateSkipQuesTest" />
+					<include name="validateSecurityQuesTest" />
+					<include name="validateUpdatingSecQuesWithWrongPswdTest" />
+					<include name="validateUpdatingSecurityQuesTest" />
+					<include name="validateSkipThenSetQuesTest" />
+				</methods>
+			</class>
+				<class name="com.ae.qa.testcases.SysadminPolicyPageTest">
+				<methods>
+					<include name="validatePswdComplexityTest" />
+					<include name="validatePasswordHistoryTest" />
+					<include name="validateNoOfAttemptsTest" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcases.InformationPageTest">
+				<methods>
+					<include name="validateLastLoginTest" />
+					<include name="validateViewProfileTest" />
+					<include name="validateChangePasswordTest" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcases.AuditLogsPageTest">
+				<methods>
+					<include name="verifycheckLogsTest" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcases.PurgePolicyPageTest">
+				<methods>
+					<include name="validateWFReqLessThanNotfTest" />
+					<include name="validatePurgePolicyDurationTest"/>
+					<include name="validateUpdatePurgePolicyEntityTest"/>
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcases.PurgeSchedulePageTest">
+				<methods>
+					<include name="validatePurgingScheduleDayTest" />
+					<include name="validatePurgingScheduleWeekendTest" />
+				</methods>
+			</class>
+				<class name="com.ae.qa.testcases.LoginPageTest">
+				<methods>
+					<include name="validateForgotPswdTest" />
+					<include name="ValidateSettingPwdWOComplexityTest" />
+					<include name="ValidateResetPswdTest" />
+					<include name="ValidateLoginWithResetPswdTest" />
+				</methods>
+			</class>
+				<class name="com.ae.qa.testcasesTenantAdmin.LoginPageTestTA">
+				<methods>
+					<include name="ValidateFirstTimeTALoginTest" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcasesTenantAdmin.HomePageTestTA">
+				<methods>
+					<include name="validateUploadLicenseTest" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcasesTenantAdmin.TenantUsersPageTestTA">
+				<methods>
+					<include name="ValidateCreatingWorkflowAdminTest" />
+					<include name="ValidateCreatingTenantAdminTest" />
+					<include name="ValidateCreatingUserAdminTest" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcasesTenantAdmin.UserGroupsPageTestTA">
+				<methods>
+					<include name="validateCreateUserGroup" />
+					<include name="validateEditUserGroup" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcasesTenantAdmin.TenantUsersPageTestTA">
+				<methods>
+					<include name="ValidateCreatingTenantUserTest" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcasesTenantAdmin.UserGroupsPageTestTA">
+				<methods>
+					<include name="validateAddUserToGroup" />
+					<include name="validateRemoveUserFromGroup" />
+					<include name="ValidateDuplicateUserGroupTest" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcasesTenantAdmin.ProcessStudioPageTestTA">
+				<methods>
+					<include name="validateDownloadandAssignPSTest" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcasesTenantAdmin.WorkflowListPageTestTA">
+				<methods>
+					<include name="validateImportWorkflowTest" />
+					<include name="ValidateUploadInvalidIconTest" />
+					<include name="ValidateUploadIconTest" />
+					<include name="ValidateEditManualExecutionTest" />
+					<include name="ValidateExportWorkflowTest" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcasesTenantAdmin.CategoriesPageTestTA">
+				<methods>
+					<include name="ValidateCreateCategoryTest" />
+					<include name="ValidateEditCategoryTest" />
+					<include name="ValidateAssignWFToCategoryTest" />
+					<include name="ValidateRemoveWFFromCategoryTest" />
+					<include name="ValidateCreateDuplicateCategoryTest" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcasesTenantAdmin.CredentialsPageTestTA">
+				<methods>
+					<include name="ValidateCreateCredentialsTest" />
+					<include name="ValidateEditCredentialsTest" />
+					<include name="ValidateDuplicateCredentialsTest" />
+					<include name="ValidateCreateCredentialPoolTest" />
+					<include name="ValidateDuplicateCredentialPoolTest" />
+					<include name="ValidateMoveCredentialToPoolTest" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcasesTenantAdmin.AgentListPageTestTA">
+				<methods>
+					<include name="validateDownloadAgentTest" />
+					<include name="validateCheckStatusOfAgent" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcasesTenantAdmin.WorkflowAssignmentPageTestTA">
+				<methods>
+					<include name="validateSingleWorkflowAssignmentTest" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcasesTenantAdmin.CataloguePageTestTA">
+				<methods>
+					<include name="validateSubmitRequestTest" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcasesTenantAdmin.RequestsPageTestTA">
+				<methods>
+					<include name="validateRequestStatusTest" />
+				</methods>
+			</class>
+				<class name="com.ae.qa.testcasesTenantAdmin.AuditLogsPageTestTA">
+				<methods>
+					<include name="validatedownloadingAuditLogsTA" />
+					<include name="validatecheckColumnsInAuditLogsTA" />
+					<include name="validatedeselectAllInAuditLogsTA" />
+					<include name="verifySpecificColumnTestTA" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcasesTenantAdmin.UserGroupsPageTestTA">
+				<methods>
+					<include name="validateDeleteUserGroup" />
+				</methods>
+			</class>
+				<class name="com.ae.qa.testcasesTenantAdmin.CategoriesPageTestTA">
+				<methods>
+					<include name="ValidateDeleteCategoryTest" />
+				</methods>
+			</class>
+				<class name="com.ae.qa.testcasesTenantAdmin.CredentialsPageTestTA">
+				<methods>
+					<include name="ValidateDeleteCredentialPoolTest" />
+					<include name="ValidateDeleteCredentialTest" />
+				</methods>
+			</class> 
+		</classes>
+	</test>
+	 <listeners>
+  		<listener class-name="com.ae.qa.Listeners.ITestListenerImplementation"></listener>
+  </listeners>
+</suite> 
